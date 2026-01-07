@@ -5,8 +5,8 @@ Projekt z przedmiotu NiOdSR
 Paczka ROS 2 Humble przeznaczona do sterowania robotem mobilnym (TurtleBot3) za pomocą gestów myszy na obrazie z kamery (OpenCV).
 
 ## Autorzy
-Juliusz Kowalski
-Kacper Kowalski
+* Juliusz Kowalski
+* Kacper Kowalski
 
 ## Funkcjonalności
 1. **Camera Node**: Subskrypcja i wyświetlanie obrazu z kamery.
