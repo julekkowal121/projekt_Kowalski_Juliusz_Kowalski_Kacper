@@ -28,7 +28,19 @@ Paczka ROS 2 Humble przeznaczona do sterowania robotem mobilnym (TurtleBot3) za 
    cd ~/ros2_ws/src
 2. Zainstaluj brakujące zależności (opcjonalnie):
   rosdep install --from-paths src --ignore-src -r -y
-3. Zbuduj paczkę:
+3. Przejdź do folderu:
+   cd ~/ros2_ws/src/camera_subscriber/camera_subscriber
+4. Stwórz plik:
+   robot_control.py
+5. Edytuj w folderze cd ~/ros2_ws/src/camera_subscriber/ plik setup.py:
+     entry_points={
+        'console_scripts': [
+   robot_control = camera_subscriber.robot_control:main',
+   ]
+    },
+6. Ponownie przejdź do katalogu `src` w swoim workspace:
+   cd ~/ros2_ws/src
+7. Zbuduj paczkę:
   colcon build --packages-select camera_subscriber
-4. Załaduj środowisko:
+8. Załaduj środowisko:
   source install/setup.bash
