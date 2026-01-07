@@ -1,2 +1,34 @@
 # projekt_Kowalski_Juliusz_Kowalski_Kacper
 Projekt z przedmiotu NiOdSR
+# ROS 2 Camera Subscriber & Robot Control
+
+Paczka ROS 2 Humble przeznaczona do sterowania robotem mobilnym (TurtleBot3) za pomocą gestów myszy na obrazie z kamery (OpenCV).
+
+## Autorzy
+Juliusz Kowalski
+Kacper Kowalski
+
+## Funkcjonalności
+1. **Camera Node**: Subskrypcja i wyświetlanie obrazu z kamery.
+2. **Mouse Interaction**: Rysowanie na obrazie i publikacja punktów kliknięcia.
+3. **Robot Control**: Sterowanie robotem na podstawie strefy kliknięcia:
+   * **Górna połowa ekranu**: Jazda do przodu.
+   * **Dolna połowa ekranu**: Jazda do tyłu.
+
+## Wymagania
+* ROS 2 Humble
+* Python 3
+* Pakiety ROS: `geometry_msgs`, `sensor_msgs`, `cv_bridge`
+* Biblioteka: `opencv-python`
+* Symulator: `turtlebot3_gazebo`
+
+## Instalacja
+
+1. Przejdź do katalogu `src` w swoim workspace:
+   cd ~/ros2_ws/src
+2. Zainstaluj brakujące zależności (opcjonalnie):
+  rosdep install --from-paths src --ignore-src -r -y
+3. Zbuduj paczkę:
+  colcon build --packages-select camera_subscriber
+4. Załaduj środowisko:
+  source install/setup.bash
